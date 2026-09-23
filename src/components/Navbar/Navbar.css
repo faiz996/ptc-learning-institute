@@ -1,0 +1,831 @@
+
+/* =========================================================
+   NAVBAR
+========================================================= */
+
+.site-header {
+  width: 100%;
+  background: #ffffff;
+  position: relative;
+  z-index: 1000;
+}
+
+.main-navbar {
+  width: 100%;
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 30px 0 42px;
+
+  box-sizing: border-box;
+  background: #ffffff;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.navbar-logo-link {
+  display: flex;
+  align-items: center;
+
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  width: 194px;
+  height: auto;
+  display: block;
+}
+
+
+/* =========================================================
+   DESKTOP MENU
+========================================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-left: auto;
+  margin-right: 210px;
+}
+
+.navbar-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 38px;
+
+  padding: 0 16px;
+
+  border-radius: 22px;
+
+  color: #3e4a63;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.navbar-link:hover {
+  color: #164a9b;
+}
+
+.navbar-link.active {
+  background: #edf6ff;
+  color: #164a9b;
+}
+
+
+/* =========================================================
+   RIGHT SIDE
+========================================================= */
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+
+  gap: 25px;
+
+  flex-shrink: 0;
+}
+
+.navbar-phone {
+  display: flex;
+  align-items: center;
+
+  gap: 6px;
+
+  color: #40516d;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.navbar-contact-icon {
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  flex-shrink: 0;
+}
+
+.book-tour-button {
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 22px;
+
+  border-radius: 12px;
+
+  background: #d90808;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  transition: background 0.2s ease;
+}
+
+.book-tour-button:hover {
+  background: #b90000;
+}
+
+
+/* =========================================================
+   MOBILE BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #1c3768;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  flex-shrink: 0;
+}
+
+.mobile-menu-button span {
+  display: block;
+
+  width: 24px;
+  height: 2px;
+
+  margin: 3px 0;
+
+  background: #1c3768;
+
+  border-radius: 2px;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION
+========================================================= */
+
+.mobile-navigation {
+  display: none;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  border-top: 1px solid #eeeeee;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  padding: 18px 20px 22px;
+}
+
+.mobile-navigation.open {
+  display: block;
+}
+
+
+/* =========================================================
+   MOBILE LINKS
+========================================================= */
+
+.mobile-navigation-links {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 5px;
+}
+
+.mobile-nav-link {
+  width: 100%;
+  min-height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0 16px;
+
+  box-sizing: border-box;
+
+  border-radius: 10px;
+
+  color: #3e4a63;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+
+  text-align: center;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  background: #f5f8fc;
+  color: #164a9b;
+}
+
+.mobile-nav-link.active {
+  background: #edf6ff;
+  color: #164a9b;
+}
+
+
+
+/* =========================================================
+   MOBILE BOTTOM
+========================================================= */
+
+.mobile-navigation-bottom {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 16px;
+
+  padding-top: 16px;
+
+  border-top: 1px solid #eeeeee;
+}
+
+
+/* =========================================================
+   MOBILE PHONE
+========================================================= */
+
+.mobile-phone {
+  min-height: 44px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 0 14px;
+
+  box-sizing: border-box;
+
+  color: #40516d;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mobile-phone-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #f3f7fc;
+
+  color: #164a9b;
+}
+
+
+/* =========================================================
+   MOBILE BOOK TOUR
+========================================================= */
+
+.mobile-book-tour {
+  width: 100%;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #d90808;
+  color: #ffffff;
+
+  text-decoration: none;
+
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: background 0.2s ease;
+}
+
+.mobile-book-tour:hover {
+  background: #b90000;
+}
+
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .main-navbar {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  .navbar-logo {
+    width: 175px;
+  }
+
+  .navbar-menu {
+    margin-right: 20px;
+  }
+
+  .navbar-link {
+    padding: 0 11px;
+    font-size: 13px;
+  }
+
+  .navbar-right {
+    gap: 15px;
+  }
+
+  .navbar-phone {
+    font-size: 12px;
+  }
+
+  .book-tour-button {
+    padding: 0 17px;
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .main-navbar {
+    height: 72px;
+
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+
+  /* Hide desktop menu */
+  .navbar-menu,
+  .navbar-right {
+    display: none;
+  }
+
+  /* Show hamburger */
+  .mobile-menu-button {
+    display: flex;
+
+    margin-left: auto;
+  }
+
+  .navbar-logo {
+    width: 165px;
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .main-navbar {
+    height: 68px;
+
+    padding: 0 16px;
+  }
+
+  .navbar-logo {
+    width: 150px;
+  }
+
+  .mobile-menu-button {
+    width: 38px;
+    height: 38px;
+
+    padding: 5px;
+  }
+
+  .mobile-navigation {
+    padding: 15px 16px 20px;
+  }
+
+  .mobile-nav-link {
+    min-height: 44px;
+
+    font-size: 14px;
+  }
+
+  .mobile-book-tour {
+    height: 44px;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 360px) {
+
+  .main-navbar {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .navbar-logo {
+    width: 135px;
+  }
+
+  .mobile-navigation {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+}
+
+
+/* =========================================================
+   NAVBAR ANIMATIONS
+========================================================= */
+
+/* ---------------------------------------------------------
+   DESKTOP LINK HOVER
+--------------------------------------------------------- */
+
+.navbar-link {
+  position: relative;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+.navbar-link:hover {
+  transform: translateY(-1px);
+}
+
+
+/* ---------------------------------------------------------
+   BOOK TOUR HOVER
+--------------------------------------------------------- */
+
+.book-tour-button {
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.book-tour-button:hover {
+  background: #b90000;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 14px rgba(217, 8, 8, 0.20);
+}
+
+.book-tour-button:active {
+  transform: translateY(0);
+}
+
+
+/* ---------------------------------------------------------
+   PHONE HOVER
+--------------------------------------------------------- */
+
+.navbar-phone {
+  transition:
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.navbar-phone:hover {
+  color: #164a9b;
+  transform: translateY(-1px);
+}
+
+.navbar-contact-icon {
+  transition:
+    transform 0.25s ease,
+    color 0.25s ease;
+}
+
+.navbar-phone:hover .navbar-contact-icon {
+  transform: scale(1.12);
+  color: #164a9b;
+}
+
+
+/* =========================================================
+   MOBILE MENU BUTTON
+========================================================= */
+
+.mobile-menu-button {
+  position: relative;
+
+  transition:
+    background 0.25s ease,
+    transform 0.2s ease;
+}
+
+.mobile-menu-button:hover {
+  background: #f3f7fc;
+}
+
+.mobile-menu-button:active {
+  transform: scale(0.92);
+}
+
+
+/* Hamburger lines */
+
+.mobile-menu-button span {
+  transition:
+    transform 0.3s ease,
+    opacity 0.2s ease,
+    width 0.25s ease;
+}
+
+
+/* =========================================================
+   MOBILE NAVIGATION OPEN ANIMATION
+========================================================= */
+
+.mobile-navigation {
+  display: block;
+
+  max-height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transform: translateY(-10px);
+
+  padding-top: 0;
+  padding-bottom: 0;
+
+  transition:
+    max-height 0.4s ease,
+    opacity 0.3s ease,
+    transform 0.35s ease,
+    padding 0.35s ease,
+    visibility 0.4s ease;
+}
+
+.mobile-navigation.open {
+  max-height: 600px;
+
+  opacity: 1;
+
+  visibility: visible;
+
+  transform: translateY(0);
+
+  padding-top: 15px;
+  padding-bottom: 20px;
+}
+
+
+/* =========================================================
+   MOBILE LINKS ANIMATION
+========================================================= */
+
+.mobile-navigation-links {
+  opacity: 0;
+  transform: translateY(-12px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease;
+}
+
+.mobile-navigation.open .mobile-navigation-links {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.08s;
+}
+
+
+/* Individual links */
+
+.mobile-nav-link {
+  opacity: 0;
+
+  transform: translateY(-10px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.mobile-navigation.open .mobile-nav-link {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* Stagger effect */
+
+.mobile-navigation.open .mobile-nav-link:nth-child(1) {
+  transition-delay: 0.10s;
+}
+
+.mobile-navigation.open .mobile-nav-link:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.mobile-navigation.open .mobile-nav-link:nth-child(3) {
+  transition-delay: 0.20s;
+}
+
+.mobile-navigation.open .mobile-nav-link:nth-child(4) {
+  transition-delay: 0.25s;
+}
+
+.mobile-navigation.open .mobile-nav-link:nth-child(5) {
+  transition-delay: 0.30s;
+}
+
+
+/* ---------------------------------------------------------
+   MOBILE LINK HOVER
+--------------------------------------------------------- */
+
+.mobile-nav-link {
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mobile-nav-link:hover {
+  background: #edf6ff;
+  color: #164a9b;
+  transform: scale(1.02);
+}
+
+.mobile-nav-link.active {
+  background: #edf6ff;
+  color: #164a9b;
+}
+
+
+/* =========================================================
+   MOBILE PHONE ANIMATION
+========================================================= */
+
+.mobile-navigation-bottom {
+  opacity: 0;
+  transform: translateY(15px);
+
+  transition:
+    opacity 0.3s ease,
+    transform 0.35s ease;
+}
+
+.mobile-navigation.open .mobile-navigation-bottom {
+  opacity: 1;
+  transform: translateY(0);
+
+  transition-delay: 0.32s;
+}
+
+
+/* Phone hover */
+
+.mobile-phone {
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.mobile-phone:hover {
+  color: #164a9b;
+  transform: translateY(-2px);
+}
+
+.mobile-phone-icon {
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease;
+}
+
+.mobile-phone:hover .mobile-phone-icon {
+  transform: scale(1.1);
+  background: #edf6ff;
+}
+
+
+/* =========================================================
+   MOBILE BOOK TOUR ANIMATION
+========================================================= */
+
+.mobile-book-tour {
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.mobile-book-tour:hover {
+  background: #b90000;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 6px 15px rgba(217, 8, 8, 0.20);
+}
+
+.mobile-book-tour:active {
+  transform: scale(0.98);
+}
+
+
+/* =========================================================
+   REDUCE MOTION ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

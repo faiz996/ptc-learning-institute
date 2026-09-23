@@ -1,0 +1,1299 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap');
+
+/* =========================================================
+   WELCOME SECTION
+========================================================= */
+
+.welcome-section {
+  width: 100%;
+  min-height: 900px;
+
+  padding: 43px 40px 70px;
+
+  box-sizing: border-box;
+
+  background: #ffffff;
+
+  font-family: "Fredoka", sans-serif;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.welcome-header {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.welcome-badge {
+  height: 42px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 30px;
+
+  background: #dff2ff;
+
+  color: #16468e;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  white-space: nowrap;
+}
+
+.welcome-badge-icon {
+  font-size: 16px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.welcome-title {
+  margin: 25px 0 0;
+
+  color: #17468f;
+
+  font-size: 54px;
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.5px;
+
+  text-align: center;
+}
+
+.welcome-title span {
+  display: inline-block;
+
+  font-size: 46px;
+
+  margin-left: 4px;
+}
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.welcome-description {
+  max-width: 1050px;
+
+  margin: 26px auto 0;
+
+  color: #465873;
+
+  font-size: 20px;
+
+  font-weight: 500;
+
+  line-height: 1.65;
+
+  letter-spacing: 0.1px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   CARDS CONTAINER
+========================================================= */
+
+.welcome-cards {
+  width: 100%;
+
+  max-width: 1375px;
+
+  margin: 69px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 35px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CARD BASE
+========================================================= */
+
+.welcome-card {
+  min-height: 400px;
+
+  padding: 37px 48px 32px;
+
+  box-sizing: border-box;
+
+  border-radius: 30px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  border: 2px solid;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.welcome-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 12px 30px rgba(23, 70, 143, 0.08);
+}
+
+/* =========================================================
+   CARD COLORS
+========================================================= */
+
+.welcome-card-learn {
+  background: #f1faff;
+
+  border-color: #d8efff;
+}
+
+.welcome-card-play {
+  background: #fff8c9;
+
+  border-color: #ffd24b;
+}
+
+.welcome-card-grow {
+  background: #effdf4;
+
+  border-color: #d4f5df;
+}
+
+/* =========================================================
+   ICON BOX
+========================================================= */
+
+.welcome-icon-box {
+  width: 92px;
+
+  height: 92px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 30px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 5px 9px rgba(0, 0, 0, 0.10);
+}
+
+.welcome-icon {
+  font-size: 40px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   PILL
+========================================================= */
+
+.welcome-pill {
+  min-width: 91px;
+
+  height: 35px;
+
+  margin-top: 27px;
+
+  padding: 0 18px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border-radius: 30px;
+
+  font-size: 15px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  letter-spacing: 0.3px;
+}
+
+/* BLUE */
+
+.welcome-pill-blue {
+  background: #17468f;
+
+  color: #ffffff;
+}
+
+/* YELLOW */
+
+.welcome-pill-yellow {
+  background: #ffbd18;
+
+  color: #111111;
+}
+
+/* GREEN */
+
+.welcome-pill-green {
+  background: #0fa64b;
+
+  color: #ffffff;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.welcome-card h3 {
+  margin: 20px 0 0;
+
+  color: #16458e;
+
+  font-size: 25px;
+
+  font-weight: 600;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.3px;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.welcome-card p {
+  max-width: 350px;
+
+  margin: 17px auto 0;
+
+  color: #465873;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.7;
+
+  letter-spacing: 0.1px;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1500px) {
+  .welcome-section {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .welcome-title {
+    font-size: 50px;
+  }
+
+  .welcome-description {
+    font-size: 18px;
+  }
+
+  .welcome-cards {
+    max-width: 1300px;
+
+    gap: 30px;
+  }
+
+  .welcome-card {
+    padding-left: 35px;
+    padding-right: 35px;
+  }
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .welcome-section {
+    min-height: auto;
+
+    padding-top: 45px;
+    padding-bottom: 70px;
+  }
+
+  .welcome-badge {
+    height: 40px;
+
+    font-size: 14px;
+  }
+
+  .welcome-title {
+    font-size: 44px;
+  }
+
+  .welcome-title span {
+    font-size: 38px;
+  }
+
+  .welcome-description {
+    max-width: 900px;
+
+    font-size: 17px;
+  }
+
+  .welcome-cards {
+    margin-top: 55px;
+
+    gap: 22px;
+  }
+
+  .welcome-card {
+    min-height: 390px;
+
+    padding: 32px 25px;
+  }
+
+  .welcome-icon-box {
+    width: 84px;
+    height: 84px;
+  }
+
+  .welcome-icon {
+    font-size: 36px;
+  }
+
+  .welcome-card h3 {
+    font-size: 22px;
+  }
+
+  .welcome-card p {
+    font-size: 15px;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .welcome-section {
+    padding: 45px 25px 65px;
+  }
+
+  .welcome-title {
+    font-size: 39px;
+
+    line-height: 1.12;
+  }
+
+  .welcome-title span {
+    font-size: 34px;
+  }
+
+  .welcome-description {
+    max-width: 720px;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+  }
+
+  .desktop-break {
+    display: none;
+  }
+
+  .welcome-cards {
+    grid-template-columns: 1fr;
+
+    max-width: 560px;
+
+    margin-top: 48px;
+
+    gap: 22px;
+  }
+
+  .welcome-card {
+    min-height: 360px;
+
+    padding: 35px 50px;
+  }
+
+  .welcome-card p {
+    max-width: 450px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .welcome-section {
+    padding: 35px 16px 55px;
+  }
+
+  /* Badge */
+
+  .welcome-badge {
+    height: 36px;
+
+    padding: 0 14px;
+
+    gap: 5px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.7px;
+  }
+
+  .welcome-badge-icon {
+    font-size: 13px;
+  }
+
+  /* Title */
+
+  .welcome-title {
+    margin-top: 22px;
+
+    font-size: 31px;
+
+    line-height: 1.15;
+
+    letter-spacing: -0.6px;
+  }
+
+  .welcome-title span {
+    font-size: 28px;
+
+    margin-left: 2px;
+  }
+
+  /* Description */
+
+  .welcome-description {
+    margin-top: 20px;
+
+    font-size: 15px;
+
+    line-height: 1.7;
+  }
+
+  /* Cards */
+
+  .welcome-cards {
+    width: 100%;
+
+    margin-top: 38px;
+
+    gap: 18px;
+  }
+
+  .welcome-card {
+    min-height: auto;
+
+    padding: 30px 24px 32px;
+
+    border-radius: 25px;
+  }
+
+  /* Icon */
+
+  .welcome-icon-box {
+    width: 78px;
+
+    height: 78px;
+
+    border-radius: 25px;
+  }
+
+  .welcome-icon {
+    font-size: 33px;
+  }
+
+  /* Pill */
+
+  .welcome-pill {
+    height: 33px;
+
+    margin-top: 21px;
+
+    font-size: 13px;
+  }
+
+  /* Card title */
+
+  .welcome-card h3 {
+    margin-top: 17px;
+
+    font-size: 21px;
+
+    line-height: 1.25;
+  }
+
+  /* Card text */
+
+  .welcome-card p {
+    margin-top: 13px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .welcome-section {
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  .welcome-title {
+    font-size: 27px;
+  }
+
+  .welcome-title span {
+    font-size: 24px;
+  }
+
+  .welcome-description {
+    font-size: 14px;
+  }
+
+  .welcome-card {
+    padding: 27px 19px 30px;
+  }
+
+  .welcome-card h3 {
+    font-size: 19px;
+  }
+
+  .welcome-card p {
+    font-size: 13px;
+  }
+}
+
+
+
+/* =========================================================
+   WELCOME SECTION — FULL ANIMATIONS
+========================================================= */
+
+
+/* =========================================================
+   1. SECTION ENTRANCE
+========================================================= */
+
+.welcome-section {
+  animation: welcomeSectionReveal 0.9s ease-out both;
+}
+
+@keyframes welcomeSectionReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   2. HEADER ENTRANCE
+========================================================= */
+
+.welcome-header {
+  animation: welcomeHeaderReveal 0.8s ease-out 0.1s both;
+}
+
+@keyframes welcomeHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   3. BADGE
+========================================================= */
+
+.welcome-badge {
+  position: relative;
+
+  animation:
+    welcomeBadgeReveal 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.25s both,
+    welcomeBadgeFloat 3.5s ease-in-out 1.2s infinite;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    background 0.25s ease;
+}
+
+@keyframes welcomeBadgeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-22px) scale(0.9);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes welcomeBadgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.welcome-badge:hover {
+  background: #d3edff;
+
+  box-shadow:
+    0 7px 18px rgba(22, 70, 142, 0.12);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   4. BADGE ICON
+========================================================= */
+
+.welcome-badge-icon {
+  display: inline-block;
+
+  animation: welcomeBadgeIconFloat 2.5s ease-in-out 1.5s infinite;
+}
+
+@keyframes welcomeBadgeIconFloat {
+  0%,
+  100% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: rotate(-8deg) scale(1.08);
+  }
+
+  50% {
+    transform: rotate(8deg) scale(1.12);
+  }
+
+  75% {
+    transform: rotate(-5deg) scale(1.05);
+  }
+}
+
+
+/* =========================================================
+   5. TITLE
+========================================================= */
+
+.welcome-title {
+  animation: welcomeTitleReveal 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+@keyframes welcomeTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   6. TITLE SPARKLE
+========================================================= */
+
+.welcome-title span {
+  animation:
+    welcomeSparkleAppear 0.7s ease-out 1s both,
+    welcomeSparkle 2.5s ease-in-out 1.7s infinite;
+
+  transform-origin: center;
+}
+
+@keyframes welcomeSparkleAppear {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-90deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+@keyframes welcomeSparkle {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+
+  25% {
+    transform: scale(1.12) rotate(8deg);
+  }
+
+  50% {
+    transform: scale(0.95) rotate(-8deg);
+  }
+
+  75% {
+    transform: scale(1.08) rotate(5deg);
+  }
+}
+
+
+/* =========================================================
+   7. DESCRIPTION
+========================================================= */
+
+.welcome-description {
+  animation: welcomeDescriptionReveal 0.9s ease-out 0.7s both;
+}
+
+@keyframes welcomeDescriptionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   8. CARDS CONTAINER
+========================================================= */
+
+.welcome-cards {
+  animation: welcomeCardsContainerReveal 0.6s ease-out 0.9s both;
+}
+
+@keyframes welcomeCardsContainerReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   9. CARD BASE ANIMATION
+========================================================= */
+
+.welcome-card {
+  position: relative;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform: translateY(45px) scale(0.96);
+
+  animation: welcomeCardReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.3s ease;
+}
+
+@keyframes welcomeCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(45px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   10. CARD STAGGER
+========================================================= */
+
+.welcome-card:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.welcome-card:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.welcome-card:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+
+/* =========================================================
+   11. CARD HOVER
+========================================================= */
+
+.welcome-card:hover {
+  transform: translateY(-10px) scale(1.015);
+
+  box-shadow:
+    0 18px 40px rgba(23, 70, 143, 0.13);
+}
+
+
+/* =========================================================
+   12. CARD LIGHT SHINE
+========================================================= */
+
+.welcome-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+  left: -70%;
+
+  width: 45%;
+  height: 300%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+
+  transform: rotate(20deg);
+
+  transition: left 0.8s ease;
+
+  pointer-events: none;
+}
+
+.welcome-card:hover::before {
+  left: 130%;
+}
+
+
+/* =========================================================
+   13. ICON BOX
+========================================================= */
+
+.welcome-icon-box {
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.welcome-card:nth-child(1) .welcome-icon-box {
+  animation:
+    welcomeIconFloat 3s ease-in-out 1.8s infinite;
+}
+
+.welcome-card:nth-child(2) .welcome-icon-box {
+  animation:
+    welcomeIconFloat 3s ease-in-out 2s infinite;
+}
+
+.welcome-card:nth-child(3) .welcome-icon-box {
+  animation:
+    welcomeIconFloat 3s ease-in-out 2.2s infinite;
+}
+
+@keyframes welcomeIconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* Icon hover */
+
+.welcome-card:hover .welcome-icon-box {
+  transform: translateY(-5px) scale(1.08);
+
+  box-shadow:
+    0 9px 18px rgba(0, 0, 0, 0.14);
+}
+
+
+/* =========================================================
+   14. ICON
+========================================================= */
+
+.welcome-icon {
+  display: inline-block;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.welcome-card:hover .welcome-icon {
+  transform: scale(1.12) rotate(5deg);
+}
+
+
+/* =========================================================
+   15. PILL ENTRANCE
+========================================================= */
+
+.welcome-pill {
+  opacity: 0;
+
+  transform: scale(0.7);
+
+  animation: welcomePillReveal 0.55s
+    cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.welcome-card:nth-child(1) .welcome-pill {
+  animation-delay: 1.55s;
+}
+
+.welcome-card:nth-child(2) .welcome-pill {
+  animation-delay: 1.75s;
+}
+
+.welcome-card:nth-child(3) .welcome-pill {
+  animation-delay: 1.95s;
+}
+
+@keyframes welcomePillReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  70% {
+    transform: scale(1.08);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   16. PILL HOVER
+========================================================= */
+
+.welcome-pill {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.welcome-card:hover .welcome-pill {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================================
+   17. CARD TITLE
+========================================================= */
+
+.welcome-card h3 {
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  animation: welcomeCardTitleReveal 0.6s ease-out forwards;
+}
+
+.welcome-card:nth-child(1) h3 {
+  animation-delay: 1.65s;
+}
+
+.welcome-card:nth-child(2) h3 {
+  animation-delay: 1.85s;
+}
+
+.welcome-card:nth-child(3) h3 {
+  animation-delay: 2.05s;
+}
+
+@keyframes welcomeCardTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   18. CARD DESCRIPTION
+========================================================= */
+
+.welcome-card p {
+  opacity: 0;
+
+  transform: translateY(15px);
+
+  animation: welcomeCardTextReveal 0.6s ease-out forwards;
+}
+
+.welcome-card:nth-child(1) p {
+  animation-delay: 1.8s;
+}
+
+.welcome-card:nth-child(2) p {
+  animation-delay: 2s;
+}
+
+.welcome-card:nth-child(3) p {
+  animation-delay: 2.2s;
+}
+
+@keyframes welcomeCardTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   19. INDIVIDUAL CARD COLOR HOVER
+========================================================= */
+
+.welcome-card-learn:hover {
+  border-color: #bde3ff;
+}
+
+.welcome-card-play:hover {
+  border-color: #ffc928;
+}
+
+.welcome-card-grow:hover {
+  border-color: #aee9c3;
+}
+
+
+/* =========================================================
+   20. MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .welcome-card {
+    transform: translateY(35px) scale(0.97);
+  }
+
+  .welcome-card:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+
+  .welcome-card::before {
+    display: none;
+  }
+
+  .welcome-card:nth-child(1) {
+    animation-delay: 0.8s;
+  }
+
+  .welcome-card:nth-child(2) {
+    animation-delay: 1s;
+  }
+
+  .welcome-card:nth-child(3) {
+    animation-delay: 1.2s;
+  }
+
+  .welcome-card:nth-child(1) .welcome-pill {
+    animation-delay: 1.35s;
+  }
+
+  .welcome-card:nth-child(2) .welcome-pill {
+    animation-delay: 1.55s;
+  }
+
+  .welcome-card:nth-child(3) .welcome-pill {
+    animation-delay: 1.75s;
+  }
+
+  .welcome-card:nth-child(1) h3 {
+    animation-delay: 1.45s;
+  }
+
+  .welcome-card:nth-child(2) h3 {
+    animation-delay: 1.65s;
+  }
+
+  .welcome-card:nth-child(3) h3 {
+    animation-delay: 1.85s;
+  }
+
+  .welcome-card:nth-child(1) p {
+    animation-delay: 1.6s;
+  }
+
+  .welcome-card:nth-child(2) p {
+    animation-delay: 1.8s;
+  }
+
+  .welcome-card:nth-child(3) p {
+    animation-delay: 2s;
+  }
+}
+
+
+/* =========================================================
+   21. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .welcome-badge {
+    animation-duration: 0.6s;
+  }
+
+  .welcome-title {
+    animation-duration: 0.7s;
+  }
+
+  .welcome-description {
+    animation-duration: 0.7s;
+  }
+
+  .welcome-card {
+    animation-duration: 0.7s;
+  }
+}
+
+
+/* =========================================================
+   22. REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .welcome-section,
+  .welcome-header,
+  .welcome-badge,
+  .welcome-badge-icon,
+  .welcome-title,
+  .welcome-title span,
+  .welcome-description,
+  .welcome-cards,
+  .welcome-card,
+  .welcome-icon-box,
+  .welcome-pill,
+  .welcome-card h3,
+  .welcome-card p {
+    animation: none !important;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    filter: none !important;
+  }
+
+  .welcome-card::before {
+    display: none;
+  }
+
+  .welcome-card,
+  .welcome-badge,
+  .welcome-icon-box,
+  .welcome-pill {
+    transition: none !important;
+  }
+}

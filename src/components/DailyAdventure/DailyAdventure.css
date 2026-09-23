@@ -1,0 +1,1330 @@
+/* =========================================
+   ACTIVITIES SECTION
+========================================= */
+
+.activities-section {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 30px 40px 50px;
+
+  box-sizing: border-box;
+
+  background: #fffef9;
+
+  font-family: "Fredoka", sans-serif;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   SECTION HEADER
+========================================= */
+
+.activities-header {
+  width: 100%;
+  max-width: 1100px;
+
+  margin: 0 auto 70px;
+
+  text-align: center;
+
+  animation: activitiesHeaderReveal 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+
+/* =========================================
+   BADGE
+========================================= */
+
+.activities-badge {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  min-height: 36px;
+
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  background: #dc2626;
+
+  color: #ffffff;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+
+  font-weight: 500;
+
+  letter-spacing: 0.7px;
+
+  position: relative;
+
+  overflow: hidden;
+
+  animation:
+    badgePop 0.7s 0.15s
+    cubic-bezier(0.34, 1.56, 0.64, 1)
+    both;
+}
+
+
+/* Shine animation */
+
+.activities-badge::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.4),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  animation: badgeShine 3.5s 1.2s ease-in-out infinite;
+}
+
+
+.badge-emoji {
+  font-size: 14px;
+
+  display: inline-block;
+
+  animation: balloonFloat 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   MAIN HEADING
+========================================= */
+
+.activities-heading {
+  margin: 14px 0 12px;
+
+  color: #194b9c;
+
+  font-size: clamp(38px, 3.4vw, 52px);
+
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  letter-spacing: -0.8px;
+
+  animation: headingReveal 0.9s 0.25s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* =========================================
+   SUBTITLE
+========================================= */
+
+.activities-subtitle {
+  max-width: 950px;
+
+  margin: 0 auto;
+
+  color: #45556f;
+
+  font-size: 21px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  animation: subtitleReveal 0.9s 0.4s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    both;
+}
+
+
+/* =========================================
+   ACTIVITIES GRID
+========================================= */
+
+.activities-grid {
+  width: 100%;
+
+  max-width: 1340px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 34px;
+}
+
+
+/* =========================================
+   COMMON ACTIVITY CARD
+========================================= */
+
+.activity-card {
+  position: relative;
+
+  min-width: 0;
+
+  min-height: 310px;
+
+  padding: 36px 34px 28px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+
+  background: #ffffff;
+
+  border: 1px solid #e4edf7;
+
+  border-radius: 35px;
+
+  box-shadow:
+    0 3px 5px rgba(28, 48, 75, 0.06);
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease,
+    border-color 0.35s ease;
+}
+
+
+/* =========================================
+   CARD DECORATIVE LIGHT
+========================================= */
+
+.activity-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -90px;
+  right: -90px;
+
+  border-radius: 50%;
+
+  background: rgba(224, 242, 254, 0.45);
+
+  z-index: -1;
+
+  transition:
+    transform 0.6s ease,
+    opacity 0.4s ease;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.activity-card:hover {
+  transform: translateY(-10px);
+
+  border-color: #cbdff2;
+
+  box-shadow:
+    0 18px 40px rgba(28, 48, 75, 0.12),
+    0 5px 15px rgba(28, 48, 75, 0.06);
+}
+
+
+.activity-card:hover::before {
+  transform: scale(2.2);
+
+  opacity: 0.7;
+}
+
+
+/* =========================================
+   STAGGERED CARD ENTRANCE
+========================================= */
+
+.activities-grid > .activity-card {
+  opacity: 0;
+
+  animation:
+    cardReveal 0.85s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+}
+
+
+.activities-grid > .activity-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+
+.activities-grid > .activity-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+
+.activities-grid > .activity-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+
+.activities-grid > .activity-card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+
+.activities-grid > .activity-card:nth-child(5) {
+  animation-delay: 0.75s;
+}
+
+
+/* =========================================
+   FEATURED ART CARD
+========================================= */
+
+.activity-featured {
+  grid-column: span 2;
+
+  min-height: 324px;
+
+  padding: 0;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  align-items: stretch;
+}
+
+
+/* =========================================
+   FEATURED IMAGE
+========================================= */
+
+.featured-image-wrapper {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+
+  min-height: 322px;
+
+  overflow: hidden;
+}
+
+
+/* Image zoom */
+
+.featured-image {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transform: scale(1.03);
+
+  transition:
+    transform 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+
+/* Hover image zoom */
+
+.activity-featured:hover .featured-image {
+  transform: scale(1.10);
+}
+
+
+/* Image overlay */
+
+.featured-image-wrapper::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.05),
+      transparent 55%
+    );
+
+  pointer-events: none;
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+}
+
+
+.activity-featured:hover .featured-image-wrapper::after {
+  opacity: 1;
+}
+
+
+/* =========================================
+   MOST LOVED BADGE
+========================================= */
+
+.featured-badge {
+  position: absolute;
+
+  top: 17px;
+  left: 17px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 5px;
+
+  padding: 7px 14px;
+
+  border-radius: 25px;
+
+  background: #ffc107;
+
+  color: #172b46;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.12);
+
+  animation:
+    lovedBadge 3s ease-in-out infinite;
+}
+
+
+/* =========================================
+   FEATURED CONTENT
+========================================= */
+
+.featured-content {
+  min-width: 0;
+
+  padding: 40px 34px 28px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-start;
+}
+
+
+/* =========================================
+   ACTIVITY ICON
+========================================= */
+
+.activity-icon {
+  width: 60px;
+
+  height: 60px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 27px;
+
+  background: #e0f2fe;
+
+  font-size: 27px;
+
+  transition:
+    transform 0.45s
+    cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.4s ease;
+}
+
+
+/* Floating animation */
+
+.activity-card:not(.activity-featured) .activity-icon {
+  animation: iconFloat 3.5s ease-in-out infinite;
+}
+
+
+.activity-card:hover .activity-icon {
+  transform:
+    translateY(-6px)
+    rotate(-5deg)
+    scale(1.08);
+
+  box-shadow:
+    0 10px 20px rgba(28, 48, 75, 0.10);
+}
+
+
+/* =========================================
+   ICON BACKGROUNDS
+========================================= */
+
+.story-activity .activity-icon {
+  background: #e0f2fe;
+}
+
+
+.music-activity .activity-icon {
+  background: #fef08a;
+}
+
+
+.blocks-activity .activity-icon {
+  background: #dcfce7;
+}
+
+
+.nature-activity .activity-icon {
+  background: #d1fae5;
+}
+
+
+/* =========================================
+   ACTIVITY TITLE
+========================================= */
+
+.activity-title {
+  width: 100%;
+
+  margin: 0 0 10px;
+
+  color: #194b9c;
+
+  font-size: 25px;
+
+  font-weight: 500;
+
+  line-height: 1.35;
+
+  letter-spacing: -0.4px;
+
+  transition:
+    color 0.3s ease,
+    transform 0.35s ease;
+}
+
+
+.activity-card:hover .activity-title {
+  color: #123d82;
+
+  transform: translateX(3px);
+}
+
+
+/* =========================================
+   ACTIVITY DESCRIPTION
+========================================= */
+
+.activity-description {
+  width: 100%;
+
+  margin: 0 0 20px;
+
+  color: #40516b;
+
+  font-size: 15px;
+
+  font-weight: 400;
+
+  line-height: 1.55;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+.activity-card:hover .activity-description {
+  color: #344963;
+}
+
+
+/* =========================================
+   ACTIVITY LABEL
+========================================= */
+
+.activity-label {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-top: auto;
+
+  color: #159b4a;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.5px;
+
+  transition:
+    transform 0.35s ease,
+    letter-spacing 0.35s ease;
+}
+
+
+.activity-card:hover .activity-label {
+  transform: translateX(4px);
+
+  letter-spacing: 0.8px;
+}
+
+
+.label-symbol {
+  font-size: 15px;
+
+  display: inline-block;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+.activity-card:hover .label-symbol {
+  transform:
+    rotate(180deg)
+    scale(1.15);
+}
+
+
+/* =========================================
+   FEATURED CARD TYPOGRAPHY
+========================================= */
+
+.featured-content .activity-icon {
+  width: auto;
+  height: auto;
+
+  margin-bottom: 12px;
+
+  background: transparent;
+
+  border-radius: 0;
+
+  font-size: 26px;
+
+  animation:
+    featuredIconFloat 3s ease-in-out infinite;
+}
+
+
+.featured-content .activity-title {
+  margin-bottom: 12px;
+
+  font-size: 25px;
+}
+
+
+.featured-content .activity-description {
+  margin-bottom: 18px;
+
+  font-size: 15px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   CARD SHINE
+========================================= */
+
+.activity-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+
+.activity-card:hover::after {
+  animation: cardShine 0.8s ease;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .activities-section {
+    padding: 40px 28px;
+  }
+
+
+  .activities-header {
+    margin-bottom: 50px;
+  }
+
+
+  .activities-heading {
+    font-size: 42px;
+  }
+
+
+  .activities-subtitle {
+    font-size: 18px;
+  }
+
+
+  .activities-grid {
+    gap: 24px;
+  }
+
+
+  .activity-card {
+    padding: 28px 24px 25px;
+
+    min-height: 300px;
+
+    border-radius: 28px;
+  }
+
+
+  .activity-featured {
+    padding: 0;
+
+    min-height: 320px;
+  }
+
+
+  .featured-content {
+    padding: 30px 24px 25px;
+  }
+
+
+  .activity-title {
+    font-size: 22px;
+  }
+
+
+  .activity-description {
+    font-size: 14px;
+  }
+
+
+  .featured-content .activity-title {
+    font-size: 22px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+  .activities-section {
+    padding: 35px 22px 45px;
+  }
+
+
+  .activities-header {
+    margin-bottom: 38px;
+  }
+
+
+  .activities-heading {
+    font-size: 36px;
+  }
+
+
+  .activities-subtitle {
+    font-size: 16px;
+  }
+
+
+  .activities-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 22px;
+  }
+
+
+  .activity-featured {
+    grid-column: span 2;
+  }
+
+
+  .activity-card {
+    min-height: 300px;
+
+    padding: 26px 22px 24px;
+  }
+
+
+  .activity-featured {
+    padding: 0;
+  }
+
+
+  .featured-content {
+    padding: 25px 22px;
+  }
+
+
+  .activity-icon {
+    width: 54px;
+    height: 54px;
+
+    margin-bottom: 18px;
+
+    border-radius: 23px;
+  }
+
+
+  .activity-title {
+    font-size: 21px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 560px) {
+
+  .activities-section {
+    padding: 35px 16px 40px;
+  }
+
+
+  /* Header */
+
+  .activities-header {
+    margin-bottom: 32px;
+  }
+
+
+  .activities-badge {
+    min-height: 34px;
+
+    padding: 0 14px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.4px;
+  }
+
+
+  .activities-heading {
+    margin: 17px 0 12px;
+
+    font-size: clamp(29px, 8vw, 37px);
+
+    line-height: 1.2;
+
+    letter-spacing: -0.6px;
+  }
+
+
+  .activities-subtitle {
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+
+
+  /* Single-column layout */
+
+  .activities-grid {
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 22px;
+  }
+
+
+  /* Featured card */
+
+  .activity-featured {
+    grid-column: span 1;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    min-height: auto;
+  }
+
+
+  .featured-image-wrapper {
+    height: 250px;
+
+    min-height: 250px;
+  }
+
+
+  .featured-image {
+    object-position: center;
+  }
+
+
+  .featured-content {
+    padding: 25px 24px 27px;
+  }
+
+
+  /* Standard cards */
+
+  .activity-card {
+    min-height: 280px;
+
+    padding: 26px 24px;
+
+    border-radius: 28px;
+  }
+
+
+  .activity-icon {
+    width: 52px;
+
+    height: 52px;
+
+    margin-bottom: 18px;
+
+    border-radius: 22px;
+
+    font-size: 24px;
+  }
+
+
+  .activity-title {
+    font-size: 23px;
+
+    line-height: 1.35;
+  }
+
+
+  .activity-description {
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+
+
+  .activity-label {
+    font-size: 11px;
+  }
+
+
+  .featured-content .activity-icon {
+    margin-bottom: 12px;
+  }
+
+
+  .featured-content .activity-title {
+    font-size: 23px;
+  }
+
+
+  /* Reduce hover movement on touch devices */
+
+  .activity-card:hover {
+    transform: translateY(-5px);
+  }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .activities-section {
+    padding: 30px 12px 35px;
+  }
+
+
+  .activities-heading {
+    font-size: 29px;
+  }
+
+
+  .activities-subtitle {
+    font-size: 13px;
+  }
+
+
+  .activity-card {
+    padding: 23px 19px;
+
+    border-radius: 25px;
+  }
+
+
+  .activity-featured {
+    padding: 0;
+  }
+
+
+  .featured-content {
+    padding: 22px 19px;
+  }
+
+
+  .featured-image-wrapper {
+    height: 215px;
+
+    min-height: 215px;
+  }
+
+
+  .activity-title {
+    font-size: 21px;
+  }
+
+
+  .activity-description {
+    font-size: 13px;
+  }
+
+
+  .featured-badge {
+    top: 12px;
+    left: 12px;
+
+    padding: 6px 11px;
+
+    font-size: 10px;
+  }
+
+}
+
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+
+
+/* Header */
+
+@keyframes activitiesHeaderReveal {
+
+  0% {
+    opacity: 0;
+
+    transform: translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* Badge */
+
+@keyframes badgePop {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(15px)
+      scale(0.75);
+  }
+
+  70% {
+    transform:
+      translateY(-3px)
+      scale(1.04);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* Badge shine */
+
+@keyframes badgeShine {
+
+  0% {
+    left: -120%;
+  }
+
+  35% {
+    left: 140%;
+  }
+
+  100% {
+    left: 140%;
+  }
+
+}
+
+
+/* Balloon */
+
+@keyframes balloonFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  50% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+
+}
+
+
+/* Heading */
+
+@keyframes headingReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      scale(0.97);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* Subtitle */
+
+@keyframes subtitleReveal {
+
+  0% {
+    opacity: 0;
+
+    transform: translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* Cards */
+
+@keyframes cardReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(55px)
+      scale(0.94);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform:
+      translateY(-4px)
+      scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* Normal icons */
+
+@keyframes iconFloat {
+
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-3px) rotate(-2deg);
+  }
+
+  50% {
+    transform: translateY(-6px) rotate(2deg);
+  }
+
+  75% {
+    transform: translateY(-3px) rotate(-1deg);
+  }
+
+}
+
+
+/* Featured icon */
+
+@keyframes featuredIconFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-5px)
+      rotate(-4deg);
+  }
+
+}
+
+
+/* Most loved badge */
+
+@keyframes lovedBadge {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-5px)
+      rotate(-2deg);
+  }
+
+}
+
+
+/* Card shine */
+
+@keyframes cardShine {
+
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 140%;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    scroll-behavior: auto !important;
+
+    transition-duration: 0.01ms !important;
+  }
+
+}
