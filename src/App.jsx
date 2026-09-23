@@ -40,7 +40,11 @@ function SimplePage({ title }) {
 
 function App() {
   return (
+<<<<<<< HEAD
     <BrowserRouter basename="/ptc-learning-institute">
+=======
+    <BrowserRouter>
+>>>>>>> feature/initial-project-setup
 
       <TopBar />
 
