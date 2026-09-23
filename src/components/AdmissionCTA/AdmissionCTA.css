@@ -1,0 +1,1614 @@
+/* =========================================
+   ADMISSION SECTION
+========================================= */
+
+.admission-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 80px 7%;
+
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #dce8ff;
+
+  font-family: "Fredoka", sans-serif;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   SECTION BACKGROUND DECORATION
+========================================= */
+
+.admission-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 650px;
+  height: 650px;
+
+  top: -350px;
+  left: -260px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.28);
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  animation:
+    admissionBgFloat
+    10s
+    ease-in-out
+    infinite;
+}
+
+
+.admission-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -260px;
+  bottom: -300px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.22);
+
+  pointer-events: none;
+
+  z-index: -1;
+
+  animation:
+    admissionBgFloatReverse
+    12s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.admission-container {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 1600px;
+
+  min-height: 700px;
+
+  box-sizing: border-box;
+
+  padding: 80px;
+
+  overflow: hidden;
+
+  border-radius: 70px;
+
+  background:
+    radial-gradient(
+      circle at 93% 78%,
+      rgba(255, 220, 100, 0.16),
+      transparent 19%
+    ),
+    linear-gradient(
+      115deg,
+      #194b9c 0%,
+      #164b96 48%,
+      #07964c 100%
+    );
+
+  box-shadow:
+    0 25px 45px rgba(29, 51, 86, 0.15);
+
+  opacity: 0;
+
+  transform:
+    translateY(60px)
+    scale(0.96);
+
+  animation:
+    admissionContainerReveal
+    1s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.1s
+    forwards;
+}
+
+
+/* =========================================
+   ANIMATED CONTAINER LIGHT
+========================================= */
+
+.admission-container::before {
+  content: "";
+
+  position: absolute;
+
+  top: -120px;
+  left: -150px;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.09),
+      transparent 65%
+    );
+
+  pointer-events: none;
+
+  animation:
+    containerGlow
+    7s
+    ease-in-out
+    infinite;
+}
+
+
+.admission-container::after {
+  content: "";
+
+  position: absolute;
+
+  width: 75%;
+  height: 100%;
+
+  top: 0;
+  left: -120%;
+
+  background:
+    linear-gradient(
+      110deg,
+      transparent,
+      rgba(255, 255, 255, 0.055),
+      transparent
+    );
+
+  transform: skewX(-18deg);
+
+  pointer-events: none;
+
+  animation:
+    containerShine
+    7s
+    ease-in-out
+    2s
+    infinite;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.admission-content {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 950px;
+}
+
+
+/* =========================================
+   ADMISSIONS BADGE
+========================================= */
+
+.admission-badge {
+  position: relative;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  min-height: 40px;
+
+  padding: 0 22px;
+
+  box-sizing: border-box;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.17);
+
+  color: #ffcf35;
+
+  font-size: 16px;
+
+  font-weight: 600;
+
+  letter-spacing: 0.8px;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform:
+    translateY(25px)
+    scale(0.8);
+
+  animation:
+    admissionBadgeReveal
+    0.8s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.65s
+    forwards;
+}
+
+
+/* Badge shine */
+
+.admission-badge::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 75%;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      transparent,
+      rgba(255, 255, 255, 0.35),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+
+  animation:
+    admissionBadgeShine
+    4s
+    ease-in-out
+    2s
+    infinite;
+}
+
+
+.admission-badge-icon {
+  display: inline-block;
+
+  font-size: 16px;
+
+  animation:
+    rulerFloat
+    2.5s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.admission-heading {
+  margin: 25px 0 23px;
+
+  color: #ffffff;
+
+  font-size:
+    clamp(45px, 4vw, 64px);
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+  letter-spacing: -1px;
+
+  opacity: 0;
+
+  transform:
+    translateY(35px);
+
+  animation:
+    admissionHeadingReveal
+    0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    0.9s
+    forwards;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.admission-description {
+  max-width: 950px;
+
+  margin: 0 0 48px;
+
+  color: #e0eaff;
+
+  font-size: 23px;
+
+  font-weight: 400;
+
+  line-height: 1.75;
+
+  letter-spacing: 0.05px;
+
+  opacity: 0;
+
+  transform:
+    translateY(25px);
+
+  animation:
+    admissionDescriptionReveal
+    0.9s
+    ease
+    1.15s
+    forwards;
+}
+
+
+/* =========================================
+   BOOKING FORM
+========================================= */
+
+.admission-form {
+  position: relative;
+
+  width: 100%;
+
+  max-width: 950px;
+
+  min-height: 103px;
+
+  padding: 16px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns:
+    1fr 1fr 1fr;
+
+  align-items: center;
+
+  gap: 17px;
+
+  border:
+    2px solid
+    rgba(255, 255, 255, 0.19);
+
+  border-radius: 45px;
+
+  background:
+    rgba(255, 255, 255, 0.08);
+
+  opacity: 0;
+
+  transform:
+    translateY(35px)
+    scale(0.96);
+
+  animation:
+    admissionFormReveal
+    0.9s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    1.35s
+    forwards;
+}
+
+
+/* =========================================
+   FORM INPUTS
+========================================= */
+
+.admission-form input {
+  width: 100%;
+
+  min-width: 0;
+
+  height: 65px;
+
+  padding: 0 23px;
+
+  box-sizing: border-box;
+
+  border:
+    1px solid
+    #cbd5e1;
+
+  border-radius: 35px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #194b9c;
+
+  font-family: inherit;
+
+  font-size: 18px;
+
+  font-weight: 500;
+
+  opacity: 0;
+
+  transform:
+    translateY(20px);
+
+  animation:
+    admissionInputReveal
+    0.65s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    forwards;
+
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease,
+    background-color 0.3s ease;
+}
+
+
+.admission-form input:nth-child(1) {
+  animation-delay: 1.65s;
+}
+
+
+.admission-form input:nth-child(2) {
+  animation-delay: 1.8s;
+}
+
+
+.admission-form input::placeholder {
+  color: #94a3b8;
+
+  opacity: 1;
+
+  transition:
+    color 0.3s ease;
+}
+
+
+/* Input hover */
+
+.admission-form input:hover {
+  border-color: #aebfd5;
+
+  box-shadow:
+    0 5px 15px rgba(25, 75, 156, 0.08);
+}
+
+
+/* Input focus */
+
+.admission-form input:focus {
+  border-color: #ffc928;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 0 0 4px rgba(255, 201, 40, 0.16),
+    0 8px 20px rgba(25, 75, 156, 0.12);
+
+  transform:
+    translateY(-2px);
+}
+
+
+.admission-form input:focus::placeholder {
+  color: #b4c0d0;
+}
+
+
+/* =========================================
+   BOOKING BUTTON
+========================================= */
+
+.admission-submit {
+  position: relative;
+
+  width: 100%;
+
+  height: 65px;
+
+  padding: 0 20px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  border: none;
+
+  border-radius: 35px;
+
+  background: #ffc21b;
+
+  color: #194b9c;
+
+  font-family: inherit;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 4px 8px rgba(0, 0, 0, 0.1);
+
+  opacity: 0;
+
+  transform:
+    translateY(20px)
+    scale(0.95);
+
+  animation:
+    admissionButtonReveal
+    0.75s
+    cubic-bezier(0.22, 1, 0.36, 1)
+    1.95s
+    forwards;
+
+  transition:
+    background-color 0.3s ease,
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+
+/* Button shine */
+
+.admission-submit::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: -120%;
+
+  width: 80%;
+
+  height: 100%;
+
+  background:
+    linear-gradient(
+      110deg,
+      transparent,
+      rgba(255, 255, 255, 0.5),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+
+  transition:
+    left 0.6s ease;
+
+  pointer-events: none;
+}
+
+
+.admission-submit:hover::before {
+  left: 150%;
+}
+
+
+/* Button hover */
+
+.admission-submit:hover {
+  background: #ffd34d;
+
+  transform:
+    translateY(-5px)
+    scale(1.025);
+
+  box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.18),
+    0 0 20px rgba(255, 201, 40, 0.22);
+}
+
+
+/* Button active */
+
+.admission-submit:active {
+  transform:
+    translateY(-1px)
+    scale(0.98);
+}
+
+
+/* Button text */
+
+.admission-submit span:first-child {
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* Calendar icon */
+
+.admission-calendar {
+  position: relative;
+
+  z-index: 2;
+
+  display: inline-block;
+
+  font-size: 20px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.admission-submit:hover .admission-calendar {
+  transform:
+    rotate(12deg)
+    scale(1.15);
+}
+
+
+/* =========================================
+   CONTACT INFORMATION
+========================================= */
+
+.admission-contact {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 32px;
+
+  margin-top: 34px;
+
+  opacity: 0;
+
+  transform:
+    translateY(20px);
+
+  animation:
+    admissionContactReveal
+    0.8s
+    ease
+    2.2s
+    forwards;
+}
+
+
+.admission-contact-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #dce8ff;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.5;
+
+  transition:
+    transform 0.35s ease,
+    color 0.35s ease;
+}
+
+
+.admission-contact-item:hover {
+  transform:
+    translateX(5px);
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   PHONE ICON
+========================================= */
+
+.contact-phone-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  color: #ffca28;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.admission-contact-item:hover .contact-phone-icon {
+  transform:
+    rotate(-12deg)
+    scale(1.15);
+}
+
+
+/* =========================================
+   PARKING ICON
+========================================= */
+
+.contact-parking-icon {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 16px;
+
+  height: 20px;
+
+  color: #b9ffe0;
+
+  font-size: 18px;
+
+  font-weight: 800;
+
+  transition:
+    transform 0.4s ease;
+}
+
+
+.admission-contact-item:hover .contact-parking-icon {
+  transform:
+    translateY(-3px)
+    scale(1.15);
+}
+
+
+/* =========================================
+   DECORATIVE ELEMENTS
+========================================= */
+
+.admission-decoration {
+  position: absolute;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================
+   BALLOON
+========================================= */
+
+.admission-balloon {
+  top: 35px;
+
+  right: 55px;
+
+  font-size: 35px;
+
+  opacity: 0.4;
+
+  animation:
+    admissionBalloonFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================
+   STAR
+========================================= */
+
+.admission-star {
+  bottom: 40px;
+
+  left: 45px;
+
+  color:
+    rgba(255, 255, 255, 0.3);
+
+  font-size: 35px;
+
+  font-weight: 700;
+
+  animation:
+    admissionStarFloat
+    3.5s
+    ease-in-out
+    infinite;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1600px) {
+
+  .admission-container {
+    min-height: 700px;
+
+    padding: 80px;
+  }
+
+  .admission-content {
+    max-width: 950px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL DESKTOP
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .admission-section {
+    padding: 60px 5%;
+  }
+
+  .admission-container {
+    min-height: 650px;
+
+    padding: 65px;
+
+    border-radius: 55px;
+  }
+
+  .admission-content {
+    max-width: 850px;
+  }
+
+  .admission-heading {
+    font-size: 54px;
+  }
+
+  .admission-description {
+    font-size: 20px;
+
+    margin-bottom: 38px;
+  }
+
+  .admission-form {
+    gap: 12px;
+
+    padding: 13px;
+  }
+
+  .admission-form input {
+    padding: 0 17px;
+
+    font-size: 15px;
+  }
+
+  .admission-submit {
+    font-size: 16px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .admission-section {
+    min-height: auto;
+
+    padding: 50px 25px;
+  }
+
+  .admission-container {
+    min-height: auto;
+
+    padding: 55px 40px;
+
+    border-radius: 45px;
+  }
+
+  .admission-content {
+    max-width: 100%;
+  }
+
+  .admission-heading {
+    font-size: 46px;
+  }
+
+  .admission-description {
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 32px;
+  }
+
+  .admission-form {
+    grid-template-columns:
+      1fr 1fr;
+
+    border-radius: 30px;
+  }
+
+  .admission-submit {
+    grid-column: span 2;
+  }
+
+  .admission-contact {
+    gap: 20px;
+  }
+
+  .admission-contact-item {
+    font-size: 14px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admission-section {
+    padding: 30px 15px;
+  }
+
+  .admission-container {
+    padding: 40px 23px;
+
+    border-radius: 35px;
+  }
+
+
+  /* Badge */
+
+  .admission-badge {
+    min-height: 35px;
+
+    padding: 0 13px;
+
+    gap: 7px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.3px;
+  }
+
+  .admission-badge-icon {
+    font-size: 13px;
+  }
+
+
+  /* Heading */
+
+  .admission-heading {
+    margin: 22px 0 18px;
+
+    font-size:
+      clamp(32px, 8.5vw, 43px);
+
+    line-height: 1.15;
+
+    letter-spacing: -0.6px;
+  }
+
+
+  /* Description */
+
+  .admission-description {
+    margin-bottom: 28px;
+
+    font-size: 15px;
+
+    line-height: 1.75;
+  }
+
+
+  /* Form */
+
+  .admission-form {
+    grid-template-columns:
+      1fr;
+
+    gap: 13px;
+
+    min-height: auto;
+
+    padding: 12px;
+
+    border-radius: 28px;
+  }
+
+  .admission-form input {
+    height: 55px;
+
+    padding: 0 18px;
+
+    font-size: 15px;
+  }
+
+  .admission-submit {
+    grid-column: auto;
+
+    height: 55px;
+
+    font-size: 16px;
+  }
+
+
+  /* Contact information */
+
+  .admission-contact {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    margin-top: 27px;
+  }
+
+  .admission-contact-item {
+    align-items: flex-start;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Decorations */
+
+  .admission-balloon {
+    top: 20px;
+
+    right: 20px;
+
+    font-size: 25px;
+  }
+
+  .admission-star {
+    bottom: 15px;
+
+    left: 15px;
+
+    font-size: 25px;
+  }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .admission-section {
+    padding: 25px 12px;
+  }
+
+  .admission-container {
+    padding: 35px 18px;
+
+    border-radius: 28px;
+  }
+
+  .admission-badge {
+    font-size: 9px;
+
+    padding: 0 10px;
+  }
+
+  .admission-heading {
+    font-size: 30px;
+  }
+
+  .admission-description {
+    font-size: 14px;
+  }
+
+  .admission-form input {
+    font-size: 14px;
+  }
+
+  .admission-submit {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   KEYFRAME ANIMATIONS
+========================================= */
+
+
+/* -----------------------------------------
+   CONTAINER REVEAL
+----------------------------------------- */
+
+@keyframes admissionContainerReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(60px)
+      scale(0.96);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform:
+      translateY(-7px)
+      scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   BACKGROUND FLOAT
+----------------------------------------- */
+
+@keyframes admissionBgFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(55px, 40px)
+      scale(1.12);
+  }
+
+}
+
+
+@keyframes admissionBgFloatReverse {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-45px, -35px)
+      scale(1.1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   CONTAINER GLOW
+----------------------------------------- */
+
+@keyframes containerGlow {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+
+    opacity: 0.7;
+  }
+
+  50% {
+    transform:
+      translate(80px, 50px)
+      scale(1.15);
+
+    opacity: 1;
+  }
+
+}
+
+
+/* -----------------------------------------
+   CONTAINER SHINE
+----------------------------------------- */
+
+@keyframes containerShine {
+
+  0% {
+    left: -120%;
+  }
+
+  25% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+
+}
+
+
+/* -----------------------------------------
+   BADGE REVEAL
+----------------------------------------- */
+
+@keyframes admissionBadgeReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(25px)
+      scale(0.8);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform:
+      translateY(-4px)
+      scale(1.05);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   BADGE SHINE
+----------------------------------------- */
+
+@keyframes admissionBadgeShine {
+
+  0% {
+    left: -120%;
+  }
+
+  30% {
+    left: 150%;
+  }
+
+  100% {
+    left: 150%;
+  }
+
+}
+
+
+/* -----------------------------------------
+   RULER FLOAT
+----------------------------------------- */
+
+@keyframes rulerFloat {
+
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-4px)
+      rotate(-8deg);
+  }
+
+}
+
+
+/* -----------------------------------------
+   HEADING REVEAL
+----------------------------------------- */
+
+@keyframes admissionHeadingReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(35px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* -----------------------------------------
+   DESCRIPTION REVEAL
+----------------------------------------- */
+
+@keyframes admissionDescriptionReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(25px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* -----------------------------------------
+   FORM REVEAL
+----------------------------------------- */
+
+@keyframes admissionFormReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(35px)
+      scale(0.96);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform:
+      translateY(-4px)
+      scale(1.01);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   INPUT REVEAL
+----------------------------------------- */
+
+@keyframes admissionInputReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* -----------------------------------------
+   BUTTON REVEAL
+----------------------------------------- */
+
+@keyframes admissionButtonReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(20px)
+      scale(0.95);
+  }
+
+  70% {
+    opacity: 1;
+
+    transform:
+      translateY(-4px)
+      scale(1.02);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   CONTACT REVEAL
+----------------------------------------- */
+
+@keyframes admissionContactReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(20px);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+
+}
+
+
+/* -----------------------------------------
+   BALLOON FLOAT
+----------------------------------------- */
+
+@keyframes admissionBalloonFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(-4deg);
+  }
+
+  25% {
+    transform:
+      translate(8px, -15px)
+      rotate(5deg);
+  }
+
+  50% {
+    transform:
+      translate(0, -25px)
+      rotate(-2deg);
+  }
+
+  75% {
+    transform:
+      translate(-8px, -12px)
+      rotate(5deg);
+  }
+
+}
+
+
+/* -----------------------------------------
+   STAR FLOAT
+----------------------------------------- */
+
+@keyframes admissionStarFloat {
+
+  0%,
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(10px, -12px)
+      rotate(25deg)
+      scale(1.15);
+  }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .admission-section *,
+  .admission-section *::before,
+  .admission-section *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+
+}

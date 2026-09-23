@@ -1,0 +1,1266 @@
+/* =========================================================
+   WHY FAMILIES SECTION
+========================================================= */
+
+.why-families-section {
+  width: 100%;
+
+  min-height: 780px;
+
+  padding: 104px 40px 110px;
+
+  box-sizing: border-box;
+
+  background: #fffefa;
+
+  font-family: "Fredoka", sans-serif;
+
+  overflow: hidden;
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.why-families-header {
+  width: 100%;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+/* =========================================================
+   BADGE
+========================================================= */
+
+.why-families-badge {
+  height: 37px;
+
+  padding: 0 20px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  box-sizing: border-box;
+
+  border-radius: 30px;
+
+  background: #fff09b;
+
+  color: #152b50;
+
+  font-size: 16px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.8px;
+
+  white-space: nowrap;
+}
+
+.why-families-badge span {
+  font-size: 17px;
+
+  line-height: 1;
+}
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.why-families-title {
+  margin: 27px 0 0;
+
+  color: #17468f;
+
+  font-size: 57px;
+
+  font-weight: 500;
+
+  line-height: 1.08;
+
+  letter-spacing: -1.7px;
+
+  text-align: center;
+}
+
+/* =========================================================
+   CARDS GRID
+========================================================= */
+
+.why-families-grid {
+  width: 100%;
+
+  max-width: 1470px;
+
+  margin: 96px auto 0;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 40px;
+
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.why-family-card {
+  min-height: 335px;
+
+  padding: 35px 37px 30px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #e4edf5;
+
+  border-radius: 34px;
+
+  background: #ffffff;
+
+  box-shadow:
+    0 15px 30px rgba(40, 65, 100, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.why-family-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 20px 35px rgba(40, 65, 100, 0.10);
+}
+
+/* =========================================================
+   ICON
+========================================================= */
+
+.why-family-icon {
+  width: 82px;
+
+  height: 82px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border-radius: 24px;
+
+  margin-bottom: 30px;
+}
+
+.why-family-icon span {
+  font-size: 40px;
+
+  line-height: 1;
+}
+
+/* Individual icon backgrounds */
+
+.why-family-icon.green {
+  background: #d9f9e5;
+}
+
+.why-family-icon.pink {
+  background: #ffe0e2;
+}
+
+.why-family-icon.yellow {
+  background: #fff18a;
+}
+
+.why-family-icon.blue {
+  background: #dff2ff;
+}
+
+/* =========================================================
+   CARD TITLE
+========================================================= */
+
+.why-family-card h3 {
+  margin: 0;
+
+  color: #16468f;
+
+  font-size: 24px;
+
+  font-weight: 600;
+
+  line-height: 1.25;
+
+  letter-spacing: -0.3px;
+}
+
+/* =========================================================
+   CARD DESCRIPTION
+========================================================= */
+
+.why-family-card p {
+  margin: 14px 0 0;
+
+  color: #465873;
+
+  font-size: 16px;
+
+  font-weight: 500;
+
+  line-height: 1.72;
+
+  letter-spacing: 0.05px;
+}
+
+/* =========================================================
+   LARGE DESKTOP
+========================================================= */
+
+@media (max-width: 1500px) {
+  .why-families-section {
+    padding-left: 30px;
+
+    padding-right: 30px;
+  }
+
+  .why-families-grid {
+    max-width: 1400px;
+
+    gap: 30px;
+  }
+
+  .why-family-card {
+    padding-left: 30px;
+
+    padding-right: 30px;
+  }
+}
+
+/* =========================================================
+   LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .why-families-section {
+    min-height: auto;
+
+    padding-top: 80px;
+
+    padding-bottom: 85px;
+  }
+
+  .why-families-title {
+    font-size: 48px;
+  }
+
+  .why-families-grid {
+    margin-top: 70px;
+
+    gap: 22px;
+  }
+
+  .why-family-card {
+    min-height: 330px;
+
+    padding: 30px 24px;
+  }
+
+  .why-family-icon {
+    width: 75px;
+
+    height: 75px;
+
+    margin-bottom: 25px;
+  }
+
+  .why-family-icon span {
+    font-size: 35px;
+  }
+
+  .why-family-card h3 {
+    font-size: 21px;
+  }
+
+  .why-family-card p {
+    font-size: 15px;
+
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .why-families-section {
+    padding: 65px 25px 75px;
+  }
+
+  .why-families-badge {
+    height: 35px;
+
+    font-size: 14px;
+  }
+
+  .why-families-title {
+    margin-top: 23px;
+
+    font-size: 40px;
+
+    line-height: 1.12;
+  }
+
+  .why-families-grid {
+    max-width: 650px;
+
+    margin-top: 55px;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+  }
+
+  .why-family-card {
+    min-height: 310px;
+
+    padding: 27px 24px;
+  }
+
+  .why-family-icon {
+    width: 70px;
+
+    height: 70px;
+
+    border-radius: 21px;
+
+    margin-bottom: 23px;
+  }
+
+  .why-family-icon span {
+    font-size: 32px;
+  }
+
+  .why-family-card h3 {
+    font-size: 20px;
+  }
+
+  .why-family-card p {
+    font-size: 14px;
+
+    line-height: 1.65;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+  .why-families-section {
+    padding: 50px 16px 60px;
+  }
+
+  /* Badge */
+
+  .why-families-badge {
+    height: 34px;
+
+    padding: 0 14px;
+
+    gap: 5px;
+
+    font-size: 11px;
+
+    letter-spacing: 0.6px;
+  }
+
+  .why-families-badge span {
+    font-size: 13px;
+  }
+
+  /* Title */
+
+  .why-families-title {
+    margin-top: 20px;
+
+    font-size: 31px;
+
+    line-height: 1.16;
+
+    letter-spacing: -0.6px;
+  }
+
+  /* Grid */
+
+  .why-families-grid {
+    width: 100%;
+
+    margin-top: 40px;
+
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  /* Card */
+
+  .why-family-card {
+    min-height: auto;
+
+    padding: 28px 24px 30px;
+
+    border-radius: 27px;
+  }
+
+  /* Icon */
+
+  .why-family-icon {
+    width: 72px;
+
+    height: 72px;
+
+    margin-bottom: 23px;
+
+    border-radius: 22px;
+  }
+
+  .why-family-icon span {
+    font-size: 33px;
+  }
+
+  /* Title */
+
+  .why-family-card h3 {
+    font-size: 21px;
+
+    line-height: 1.25;
+  }
+
+  /* Text */
+
+  .why-family-card p {
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+  .why-families-section {
+    padding-left: 13px;
+
+    padding-right: 13px;
+  }
+
+  .why-families-title {
+    font-size: 27px;
+  }
+
+  .why-family-card {
+    padding: 25px 20px 28px;
+  }
+
+  .why-family-card h3 {
+    font-size: 19px;
+  }
+
+  .why-family-card p {
+    font-size: 13px;
+  }
+}
+
+
+
+
+/* =========================================================
+   WHY FAMILIES — FULL ANIMATIONS
+========================================================= */
+
+
+/* =========================================================
+   1. SECTION FADE IN
+========================================================= */
+
+.why-families-section {
+  animation: whySectionReveal 0.9s ease-out both;
+}
+
+@keyframes whySectionReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   2. HEADER REVEAL
+========================================================= */
+
+.why-families-header {
+  animation: whyHeaderReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1) 0.1s both;
+}
+
+@keyframes whyHeaderReveal {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   3. BADGE ANIMATION
+========================================================= */
+
+.why-families-badge {
+  animation:
+    whyBadgeReveal 0.7s
+      cubic-bezier(0.22, 1, 0.36, 1) 0.25s both,
+    whyBadgeFloat 3.5s ease-in-out 1.2s infinite;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+@keyframes whyBadgeReveal {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.85);
+  }
+
+  70% {
+    transform: translateY(3px) scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes whyBadgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.why-families-badge:hover {
+  transform: translateY(-3px) scale(1.03);
+
+  background: #ffed83;
+
+  box-shadow:
+    0 8px 20px rgba(255, 190, 20, 0.18);
+}
+
+
+/* =========================================================
+   4. BADGE HEART
+========================================================= */
+
+.why-families-badge span {
+  display: inline-block;
+
+  transform-origin: center;
+
+  animation:
+    whyHeartAppear 0.6s ease-out 0.8s both,
+    whyHeartBeat 2.2s ease-in-out 1.5s infinite;
+}
+
+@keyframes whyHeartAppear {
+  from {
+    opacity: 0;
+    transform: scale(0) rotate(-30deg);
+  }
+
+  70% {
+    transform: scale(1.2) rotate(8deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+@keyframes whyHeartBeat {
+  0%,
+  70%,
+  100% {
+    transform: scale(1);
+  }
+
+  10% {
+    transform: scale(1.18);
+  }
+
+  20% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.12);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}
+
+
+/* =========================================================
+   5. TITLE REVEAL
+========================================================= */
+
+.why-families-title {
+  animation: whyTitleReveal 0.9s
+    cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+
+@keyframes whyTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+    filter: blur(5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+
+/* =========================================================
+   6. GRID REVEAL
+========================================================= */
+
+.why-families-grid {
+  animation: whyGridReveal 0.6s ease-out 0.75s both;
+}
+
+@keyframes whyGridReveal {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   7. CARD ENTRANCE
+========================================================= */
+
+.why-family-card {
+  position: relative;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform: translateY(50px) scale(0.94);
+
+  animation: whyCardReveal 0.8s
+    cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease,
+    border-color 0.3s ease;
+}
+
+@keyframes whyCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.94);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+
+/* =========================================================
+   8. CARD STAGGER
+========================================================= */
+
+.why-family-card:nth-child(1) {
+  animation-delay: 0.9s;
+}
+
+.why-family-card:nth-child(2) {
+  animation-delay: 1.1s;
+}
+
+.why-family-card:nth-child(3) {
+  animation-delay: 1.3s;
+}
+
+.why-family-card:nth-child(4) {
+  animation-delay: 1.5s;
+}
+
+
+/* =========================================================
+   9. CARD HOVER
+========================================================= */
+
+.why-family-card:hover {
+  transform: translateY(-10px) scale(1.015);
+
+  box-shadow:
+    0 22px 42px rgba(40, 65, 100, 0.13);
+}
+
+
+/* =========================================================
+   10. CARD SHINE EFFECT
+========================================================= */
+
+.why-family-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: -120%;
+  left: -80%;
+
+  width: 45%;
+  height: 300%;
+
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.5),
+    transparent
+  );
+
+  transform: rotate(22deg);
+
+  transition: left 0.8s ease;
+
+  pointer-events: none;
+
+  z-index: 0;
+}
+
+.why-family-card:hover::before {
+  left: 135%;
+}
+
+
+/* =========================================================
+   11. KEEP CARD CONTENT ABOVE SHINE
+========================================================= */
+
+.why-family-card > * {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   12. ICON BOX ENTRANCE
+========================================================= */
+
+.why-family-icon {
+  opacity: 0;
+
+  transform: scale(0.65) rotate(-12deg);
+
+  animation: whyIconReveal 0.7s
+    cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.why-family-card:nth-child(1) .why-family-icon {
+  animation-delay: 1.25s;
+}
+
+.why-family-card:nth-child(2) .why-family-icon {
+  animation-delay: 1.45s;
+}
+
+.why-family-card:nth-child(3) .why-family-icon {
+  animation-delay: 1.65s;
+}
+
+.why-family-card:nth-child(4) .why-family-icon {
+  animation-delay: 1.85s;
+}
+
+@keyframes whyIconReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.65) rotate(-12deg);
+  }
+
+  70% {
+    transform: scale(1.08) rotate(4deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+
+/* =========================================================
+   13. ICON FLOAT
+========================================================= */
+
+.why-family-card:nth-child(1) .why-family-icon {
+  animation:
+    whyIconReveal 0.7s
+      cubic-bezier(0.22, 1, 0.36, 1) 1.25s both,
+    whyIconFloat 3.2s ease-in-out 2s infinite;
+}
+
+.why-family-card:nth-child(2) .why-family-icon {
+  animation:
+    whyIconReveal 0.7s
+      cubic-bezier(0.22, 1, 0.36, 1) 1.45s both,
+    whyIconFloat 3.2s ease-in-out 2.2s infinite;
+}
+
+.why-family-card:nth-child(3) .why-family-icon {
+  animation:
+    whyIconReveal 0.7s
+      cubic-bezier(0.22, 1, 0.36, 1) 1.65s both,
+    whyIconFloat 3.2s ease-in-out 2.4s infinite;
+}
+
+.why-family-card:nth-child(4) .why-family-icon {
+  animation:
+    whyIconReveal 0.7s
+      cubic-bezier(0.22, 1, 0.36, 1) 1.85s both,
+    whyIconFloat 3.2s ease-in-out 2.6s infinite;
+}
+
+@keyframes whyIconFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-7px);
+  }
+}
+
+
+/* =========================================================
+   14. ICON HOVER
+========================================================= */
+
+.why-family-card:hover .why-family-icon {
+  transform: translateY(-5px) scale(1.09) rotate(2deg);
+
+  box-shadow:
+    0 10px 20px rgba(40, 65, 100, 0.12);
+}
+
+
+/* =========================================================
+   15. ICON EMOJI
+========================================================= */
+
+.why-family-icon span {
+  display: inline-block;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.why-family-card:hover .why-family-icon span {
+  transform: scale(1.15) rotate(7deg);
+}
+
+
+/* =========================================================
+   16. CARD TITLE REVEAL
+========================================================= */
+
+.why-family-card h3 {
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  animation: whyCardTitleReveal 0.6s ease-out forwards;
+}
+
+.why-family-card:nth-child(1) h3 {
+  animation-delay: 1.45s;
+}
+
+.why-family-card:nth-child(2) h3 {
+  animation-delay: 1.65s;
+}
+
+.why-family-card:nth-child(3) h3 {
+  animation-delay: 1.85s;
+}
+
+.why-family-card:nth-child(4) h3 {
+  animation-delay: 2.05s;
+}
+
+@keyframes whyCardTitleReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   17. CARD DESCRIPTION REVEAL
+========================================================= */
+
+.why-family-card p {
+  opacity: 0;
+
+  transform: translateY(18px);
+
+  animation: whyCardTextReveal 0.7s ease-out forwards;
+}
+
+.why-family-card:nth-child(1) p {
+  animation-delay: 1.6s;
+}
+
+.why-family-card:nth-child(2) p {
+  animation-delay: 1.8s;
+}
+
+.why-family-card:nth-child(3) p {
+  animation-delay: 2s;
+}
+
+.why-family-card:nth-child(4) p {
+  animation-delay: 2.2s;
+}
+
+@keyframes whyCardTextReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================================
+   18. INDIVIDUAL ICON COLORS HOVER
+========================================================= */
+
+.why-family-icon.green {
+  transition:
+    background 0.3s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.why-family-icon.pink {
+  transition:
+    background 0.3s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.why-family-icon.yellow {
+  transition:
+    background 0.3s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.why-family-icon.blue {
+  transition:
+    background 0.3s ease,
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.why-family-card:hover .why-family-icon.green {
+  background: #c9f5d9;
+}
+
+.why-family-card:hover .why-family-icon.pink {
+  background: #ffd2d6;
+}
+
+.why-family-card:hover .why-family-icon.yellow {
+  background: #ffe96b;
+}
+
+.why-family-card:hover .why-family-icon.blue {
+  background: #cdeaff;
+}
+
+
+/* =========================================================
+   19. CARD BORDER HOVER
+========================================================= */
+
+.why-family-card:nth-child(1):hover {
+  border-color: #c8e9d6;
+}
+
+.why-family-card:nth-child(2):hover {
+  border-color: #ffcdd2;
+}
+
+.why-family-card:nth-child(3):hover {
+  border-color: #ffe06a;
+}
+
+.why-family-card:nth-child(4):hover {
+  border-color: #c9e7ff;
+}
+
+
+/* =========================================================
+   20. TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .why-family-card {
+    transform: translateY(40px) scale(0.96);
+  }
+
+  .why-family-card:hover {
+    transform: translateY(-7px) scale(1.01);
+  }
+
+  .why-family-card::before {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   21. MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .why-families-section {
+    animation-duration: 0.7s;
+  }
+
+  .why-families-header {
+    animation-duration: 0.7s;
+  }
+
+  .why-families-title {
+    animation-duration: 0.75s;
+  }
+
+  .why-family-card {
+    transform: translateY(35px) scale(0.97);
+  }
+
+  .why-family-card:hover {
+    transform: translateY(-6px) scale(1.01);
+  }
+
+  /* Mobile stagger */
+
+  .why-family-card:nth-child(1) {
+    animation-delay: 0.75s;
+  }
+
+  .why-family-card:nth-child(2) {
+    animation-delay: 0.95s;
+  }
+
+  .why-family-card:nth-child(3) {
+    animation-delay: 1.15s;
+  }
+
+  .why-family-card:nth-child(4) {
+    animation-delay: 1.35s;
+  }
+
+  /* Mobile icons */
+
+  .why-family-card:nth-child(1) .why-family-icon {
+    animation-delay: 1.1s, 1.8s;
+  }
+
+  .why-family-card:nth-child(2) .why-family-icon {
+    animation-delay: 1.3s, 2s;
+  }
+
+  .why-family-card:nth-child(3) .why-family-icon {
+    animation-delay: 1.5s, 2.2s;
+  }
+
+  .why-family-card:nth-child(4) .why-family-icon {
+    animation-delay: 1.7s, 2.4s;
+  }
+
+  /* Titles */
+
+  .why-family-card:nth-child(1) h3 {
+    animation-delay: 1.3s;
+  }
+
+  .why-family-card:nth-child(2) h3 {
+    animation-delay: 1.5s;
+  }
+
+  .why-family-card:nth-child(3) h3 {
+    animation-delay: 1.7s;
+  }
+
+  .why-family-card:nth-child(4) h3 {
+    animation-delay: 1.9s;
+  }
+
+  /* Text */
+
+  .why-family-card:nth-child(1) p {
+    animation-delay: 1.45s;
+  }
+
+  .why-family-card:nth-child(2) p {
+    animation-delay: 1.65s;
+  }
+
+  .why-family-card:nth-child(3) p {
+    animation-delay: 1.85s;
+  }
+
+  .why-family-card:nth-child(4) p {
+    animation-delay: 2.05s;
+  }
+
+  .why-family-card::before {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   22. SMALL MOBILE
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .why-families-badge {
+    animation-duration: 0.6s;
+  }
+
+  .why-families-title {
+    animation-duration: 0.7s;
+  }
+
+  .why-family-card {
+    animation-duration: 0.7s;
+  }
+
+  .why-family-card:hover {
+    transform: translateY(-5px) scale(1.005);
+  }
+}
+
+
+/* =========================================================
+   23. ACCESSIBILITY
+   RESPECT REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .why-families-section,
+  .why-families-header,
+  .why-families-badge,
+  .why-families-badge span,
+  .why-families-title,
+  .why-families-grid,
+  .why-family-card,
+  .why-family-icon,
+  .why-family-icon span,
+  .why-family-card h3,
+  .why-family-card p {
+    animation: none !important;
+
+    opacity: 1 !important;
+
+    transform: none !important;
+
+    filter: none !important;
+  }
+
+  .why-family-card::before {
+    display: none;
+  }
+
+  .why-family-card,
+  .why-family-icon,
+  .why-families-badge {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,1015 @@
+/* =========================================
+   STATS SECTION
+========================================= */
+
+.stats-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 445px;
+
+  padding: 95px 42px;
+
+  box-sizing: border-box;
+
+  background: #194b9c;
+
+  overflow: hidden;
+
+  font-family: "Fredoka", sans-serif;
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   BACKGROUND ANIMATION
+========================================= */
+
+.stats-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: -300px;
+  right: -180px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.045);
+
+  pointer-events: none;
+
+  animation: statsBackgroundFloat 8s ease-in-out infinite;
+}
+
+
+.stats-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 420px;
+  height: 420px;
+
+  bottom: -280px;
+  left: -170px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.035);
+
+  pointer-events: none;
+
+  animation: statsBackgroundFloatReverse 10s ease-in-out infinite;
+}
+
+
+/* =========================================
+   STATISTICS CONTAINER
+========================================= */
+
+.stats-container {
+  position: relative;
+
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1800px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 46px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   STAT CARD
+========================================= */
+
+.stat-card {
+  position: relative;
+
+  width: 100%;
+  min-width: 0;
+
+  height: 254px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px 15px;
+
+  background: rgba(255, 255, 255, 0.09);
+
+  border: 2px solid rgba(255, 255, 255, 0.16);
+
+  border-radius: 48px;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  opacity: 0;
+
+  transform: translateY(65px) scale(0.9);
+
+  animation:
+    statCardReveal 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.4s ease,
+    box-shadow 0.45s ease,
+    border-color 0.4s ease;
+}
+
+
+/* =========================================
+   CARD STAGGER
+========================================= */
+
+.stat-card:nth-child(1) {
+  animation-delay: 0.15s;
+}
+
+.stat-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.stat-card:nth-child(3) {
+  animation-delay: 0.45s;
+}
+
+.stat-card:nth-child(4) {
+  animation-delay: 0.6s;
+}
+
+
+/* =========================================
+   CARD GLOW
+========================================= */
+
+.stat-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -95px;
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  z-index: -1;
+
+  transform: scale(0);
+
+  opacity: 0;
+
+  transition:
+    transform 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.5s ease;
+}
+
+
+.stat-card::after {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -120%;
+
+  width: 70%;
+  height: 100%;
+
+  background: linear-gradient(
+    110deg,
+    transparent,
+    rgba(255, 255, 255, 0.14),
+    transparent
+  );
+
+  transform: skewX(-20deg);
+
+  pointer-events: none;
+
+  z-index: 5;
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.stat-card:hover {
+  transform: translateY(-12px) scale(1.025);
+
+  background: rgba(255, 255, 255, 0.14);
+
+  border-color: rgba(255, 255, 255, 0.3);
+
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.2),
+    0 0 30px rgba(255, 255, 255, 0.08);
+}
+
+
+.stat-card:hover::before {
+  transform: scale(2.3);
+
+  opacity: 1;
+}
+
+
+.stat-card:hover::after {
+  animation: cardShine 0.9s ease;
+}
+
+
+/* =========================================
+   INDIVIDUAL CARD COLOR GLOW
+========================================= */
+
+.learners-stat:hover {
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(255, 201, 40, 0.16);
+}
+
+
+.activities-stat:hover {
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(216, 255, 231, 0.15);
+}
+
+
+.teachers-stat:hover {
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(216, 234, 255, 0.15);
+}
+
+
+.experience-stat:hover {
+  box-shadow:
+    0 25px 55px rgba(0, 0, 0, 0.2),
+    0 0 35px rgba(255, 201, 40, 0.16);
+}
+
+
+/* =========================================
+   STAT ICON
+========================================= */
+
+.stat-icon {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  height: 55px;
+
+  margin-bottom: 10px;
+
+  font-size: 43px;
+
+  line-height: 1;
+
+  transform: translateY(0);
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.4s ease;
+}
+
+
+/* Floating icon animation */
+
+.stat-card .stat-icon {
+  animation: iconFloat 3.2s ease-in-out infinite;
+}
+
+
+/* Different timing */
+
+.stat-card:nth-child(2) .stat-icon {
+  animation-delay: 0.4s;
+}
+
+.stat-card:nth-child(3) .stat-icon {
+  animation-delay: 0.8s;
+}
+
+.stat-card:nth-child(4) .stat-icon {
+  animation-delay: 1.2s;
+}
+
+
+/* Icon hover */
+
+.stat-card:hover .stat-icon {
+  transform:
+    translateY(-7px)
+    rotate(-8deg)
+    scale(1.18);
+
+  filter:
+    drop-shadow(0 8px 8px rgba(0, 0, 0, 0.15));
+}
+
+
+/* =========================================
+   STAT NUMBER
+========================================= */
+
+.stat-number {
+  margin: 0;
+
+  font-size: 68px;
+
+  font-weight: 500;
+
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+
+  color: #ffc928;
+
+  transform: translateY(0);
+
+  transition:
+    transform 0.4s ease,
+    letter-spacing 0.4s ease,
+    filter 0.4s ease;
+
+  animation: numberPulse 3.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   NUMBER HOVER
+========================================= */
+
+.stat-card:hover .stat-number {
+  transform: translateY(-3px) scale(1.06);
+
+  letter-spacing: 0;
+
+  filter:
+    drop-shadow(0 5px 12px rgba(255, 255, 255, 0.12));
+}
+
+
+/* =========================================
+   INDIVIDUAL NUMBER COLORS
+========================================= */
+
+.learners-stat .stat-number {
+  color: #ffc928;
+}
+
+
+.activities-stat .stat-number {
+  color: #d8ffe7;
+}
+
+
+.teachers-stat .stat-number {
+  color: #d8eaff;
+}
+
+
+.experience-stat .stat-number {
+  color: #ffc928;
+}
+
+
+/* =========================================
+   STAT LABEL
+========================================= */
+
+.stat-label {
+  margin: 9px 0 0;
+
+  width: 100%;
+
+  color: #e3edff;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  line-height: 1.4;
+
+  letter-spacing: 0.7px;
+
+  text-align: center;
+
+  transition:
+    transform 0.4s ease,
+    color 0.4s ease,
+    letter-spacing 0.4s ease;
+}
+
+
+/* =========================================
+   LABEL HOVER
+========================================= */
+
+.stat-card:hover .stat-label {
+  transform: translateY(-2px);
+
+  color: #ffffff;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   DECORATIVE STARS
+========================================= */
+
+.stats-decoration {
+  position: absolute;
+
+  z-index: 1;
+
+  color: rgba(255, 255, 255, 0.12);
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+/* =========================================
+   STAR ONE
+========================================= */
+
+.stats-star-one {
+  top: 61px;
+
+  left: 55px;
+
+  font-size: 36px;
+
+  animation:
+    starFloatOne 4s ease-in-out infinite,
+    starGlow 2.5s ease-in-out infinite;
+}
+
+
+/* =========================================
+   STAR TWO
+========================================= */
+
+.stats-star-two {
+  top: 75px;
+
+  left: 81px;
+
+  font-size: 23px;
+
+  animation:
+    starFloatTwo 3.5s ease-in-out infinite,
+    starGlow 2.8s ease-in-out infinite;
+}
+
+
+/* =========================================
+   STAR THREE
+========================================= */
+
+.stats-star-three {
+  top: 91px;
+
+  left: 64px;
+
+  font-size: 17px;
+
+  animation:
+    starFloatThree 3s ease-in-out infinite,
+    starGlow 2.2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   LARGE DESKTOP
+========================================= */
+
+@media (min-width: 1600px) {
+
+  .stats-section {
+    padding-left: 42px;
+
+    padding-right: 42px;
+  }
+
+  .stats-container {
+    gap: 46px;
+  }
+
+  .stat-card {
+    height: 254px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL DESKTOP
+========================================= */
+
+@media (max-width: 1400px) {
+
+  .stats-section {
+    padding: 75px 35px;
+  }
+
+  .stats-container {
+    gap: 28px;
+  }
+
+  .stat-card {
+    height: 235px;
+
+    border-radius: 40px;
+  }
+
+  .stat-number {
+    font-size: 58px;
+  }
+
+  .stat-label {
+    font-size: 15px;
+  }
+
+  .stat-icon {
+    font-size: 38px;
+  }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .stats-section {
+    min-height: auto;
+
+    padding: 60px 35px;
+  }
+
+  .stats-container {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+  }
+
+  .stat-card {
+    height: 230px;
+
+    border-radius: 35px;
+  }
+
+  .stat-number {
+    font-size: 58px;
+  }
+
+  .stat-label {
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .stats-section {
+    min-height: auto;
+
+    padding: 45px 20px;
+  }
+
+  .stats-container {
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 20px;
+
+    max-width: 400px;
+  }
+
+  .stat-card {
+    height: 215px;
+
+    padding: 25px 15px;
+
+    border-radius: 32px;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-7px) scale(1.015);
+  }
+
+  .stat-icon {
+    height: 48px;
+
+    margin-bottom: 10px;
+
+    font-size: 37px;
+  }
+
+  .stat-number {
+    font-size: 56px;
+
+    line-height: 1.15;
+  }
+
+  .stat-label {
+    margin-top: 10px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+  }
+
+  .stats-star-one {
+    top: 25px;
+
+    left: 15px;
+
+    font-size: 28px;
+  }
+
+  .stats-star-two {
+    top: 43px;
+
+    left: 39px;
+
+    font-size: 20px;
+  }
+
+  .stats-star-three {
+    top: 57px;
+
+    left: 24px;
+
+    font-size: 15px;
+  }
+
+}
+
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+
+  .stats-section {
+    padding: 35px 15px;
+  }
+
+  .stat-card {
+    height: 195px;
+
+    border-radius: 28px;
+  }
+
+  .stat-number {
+    font-size: 48px;
+  }
+
+  .stat-label {
+    font-size: 12px;
+  }
+
+  .stat-icon {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+
+/* -----------------------------------------
+   CARD REVEAL
+----------------------------------------- */
+
+@keyframes statCardReveal {
+
+  0% {
+    opacity: 0;
+
+    transform:
+      translateY(65px)
+      scale(0.9);
+  }
+
+  60% {
+    opacity: 1;
+
+    transform:
+      translateY(-8px)
+      scale(1.015);
+  }
+
+  80% {
+    transform:
+      translateY(3px)
+      scale(0.995);
+  }
+
+  100% {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   ICON FLOAT
+----------------------------------------- */
+
+@keyframes iconFloat {
+
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  25% {
+    transform: translateY(-5px) rotate(2deg);
+  }
+
+  50% {
+    transform: translateY(-9px) rotate(0deg);
+  }
+
+  75% {
+    transform: translateY(-4px) rotate(-2deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+}
+
+
+/* -----------------------------------------
+   NUMBER PULSE
+----------------------------------------- */
+
+@keyframes numberPulse {
+
+  0% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.025);
+  }
+
+  55% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   CARD SHINE
+----------------------------------------- */
+
+@keyframes cardShine {
+
+  0% {
+    left: -120%;
+  }
+
+  100% {
+    left: 150%;
+  }
+
+}
+
+
+/* -----------------------------------------
+   BACKGROUND CIRCLE
+----------------------------------------- */
+
+@keyframes statsBackgroundFloat {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-45px, 35px)
+      scale(1.12);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+}
+
+
+@keyframes statsBackgroundFloatReverse {
+
+  0% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(40px, -30px)
+      scale(1.08);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   STAR FLOAT
+----------------------------------------- */
+
+@keyframes starFloatOne {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translate(8px, -12px)
+      rotate(18deg);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg);
+  }
+
+}
+
+
+@keyframes starFloatTwo {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translate(-7px, 10px)
+      rotate(-20deg);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg);
+  }
+
+}
+
+
+@keyframes starFloatThree {
+
+  0% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(5px, -8px)
+      rotate(25deg)
+      scale(1.15);
+  }
+
+  100% {
+    transform:
+      translate(0, 0)
+      rotate(0deg)
+      scale(1);
+  }
+
+}
+
+
+/* -----------------------------------------
+   STAR GLOW
+----------------------------------------- */
+
+@keyframes starGlow {
+
+  0% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.8;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .stats-section *,
+  .stats-section *::before,
+  .stats-section *::after {
+    animation-duration: 0.01ms !important;
+
+    animation-iteration-count: 1 !important;
+
+    transition-duration: 0.01ms !important;
+
+    scroll-behavior: auto !important;
+  }
+
+}
